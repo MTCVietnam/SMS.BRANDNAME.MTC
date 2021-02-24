@@ -1,10 +1,10 @@
 <?php
-$USERNAME  = '';
-$PASSWORD  = '';
-$BRANDNAME = '';
-$MESSAGE = 'Test tin nhan tu VTDD';
-$TYPE  = 1;
-$PHONE  = '09xxxxxxxx';
+$USERNAME  = ''; ///Provided
+$PASSWORD  = ''; ///Provided
+$BRANDNAME = ''; ///Provided  BRANDNAME of parnert
+$MESSAGE = 'Test tin nhan tu VTDD'; ////Lenght of SMS <160 character : 1 sms
+$TYPE  = 1;  ///0: Advertising - 1: customer support
+$PHONE  = '09xxxxxxxx'; ///pre-fix is "0" or "84"
 $IDREQ  = time();
 $client  = new SoapClient("http://210.211.109.118/apibrandname/send?wsdl");
 $result  = $client->send(array("USERNAME" => $USERNAME, "PASSWORD" => $PASSWORD, "BRANDNAME" => $BRANDNAME, "MESSAGE" => $MESSAGE, "TYPE" => $TYPE, "PHONE" => $PHONE, "IDREQ" => $IDREQ));
