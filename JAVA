@@ -35,6 +35,12 @@ import org.xml.sax.SAXException;
  */
 public class demoxml {
     static String url ="http://210.211.109.117/apibrandname/send?wsdl";
+    ////username  Provided;
+    ////pass   Provided;
+    ////brandname  Provided;
+    ////mesage Lenght of SMS <160 character : 1 sms;
+    ////phone pre-fix is "0" or "84";
+    ////IDREQ time();
     public static void main(String[] args) {
     }
     public static String SendGet(String username, String pass, String brandname, String mesage, String phone,String IDREQ ) {
