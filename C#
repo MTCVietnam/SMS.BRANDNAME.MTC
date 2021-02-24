@@ -13,12 +13,12 @@ namespace WindowsFormsApplication1
         [STAThread]
         static void Main()
         {
-            string username = "";
-            string pass = "";
-            string brand = "VTDD";
-            string type = "1";
-            string mess = "Tin nhan test ";
-            string phone = "09xxxxx";
+            string username = ""; ///Provided 
+            string pass = ""; ///Provided
+            string brand = "VTDD"; ///Provided (BRANDNAME of parnert)
+            string type = "1"; ///	0: Advertising - 1: customer support
+            string mess = "Tin nhan test "; ///Lenght of SMS <160 character : 1 sms
+            string phone = "09xxxxx"; ////pre-fix is "0" or "84"
             string idreq = "09013280892152"; /// time();
             ServiceReference1.sendsmsresponse re = new ServiceReference1.sendClient().send(username, pass, brand, mess, type, phone, idreq);
             System.Console.Write(re.result);
