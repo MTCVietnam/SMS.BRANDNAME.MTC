@@ -31,7 +31,7 @@ import org.xml.sax.SAXException;
 
 /**
  *
- * @author NGUYEN MINH TIEN
+ * 
  */
 public class demoxml {
     static String url ="http://210.211.109.117/apibrandname/send?wsdl";
