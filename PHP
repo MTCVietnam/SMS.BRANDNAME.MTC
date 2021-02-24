@@ -1,0 +1,13 @@
+<?php
+$USERNAME  = '';
+$PASSWORD  = '';
+$BRANDNAME = '';
+$MESSAGE = 'Test tin nhan tu VTDD';
+$TYPE  = 1;
+$PHONE  = '09xxxxxxxx';
+$IDREQ  = time();
+$client  = new SoapClient("http://210.211.109.118/apibrandname/send?wsdl");
+$result  = $client->send(array("USERNAME" => $USERNAME, "PASSWORD" => $PASSWORD, "BRANDNAME" => $BRANDNAME, "MESSAGE" => $MESSAGE, "TYPE" => $TYPE, "PHONE" => $PHONE, "IDREQ" => $IDREQ));
+$response  = $result;
+var_dump($response);
+?>
