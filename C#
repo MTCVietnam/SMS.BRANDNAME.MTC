@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            string username = "";
+            string pass = "";
+            string brand = "VTDD";
+            string type = "1";
+            string mess = "Tin nhan test ";
+            string phone = "09xxxxx";
+            string idreq = "09013280892152"; /// time();
+            ServiceReference1.sendsmsresponse re = new ServiceReference1.sendClient().send(username, pass, brand, mess, type, phone, idreq);
+            System.Console.Write(re.result);
+            Console.ReadLine();
+
+        }
+    }
+}
