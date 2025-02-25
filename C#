@@ -15,9 +15,9 @@ namespace WindowsFormsApplication1
         {
             string username = ""; ///Provided 
             string pass = ""; ///Provided
-            string brand = "VTDD"; ///Provided (BRANDNAME of parnert)
+            string brand = "TRI VIET"; ///Provided (BRANDNAME of parnert)
             string type = "1"; ///	0: Advertising - 1: customer support
-            string mess = "Tin nhan test "; ///Lenght of SMS <160 character : 1 sms
+            string mess = "Dat hang thanh cong. DH cua ban la xxxx. Cam on ban."; ///Lenght of SMS <160 character : 1 sms
             string phone = "09xxxxx"; ////pre-fix is "0" or "84"
             string idreq = "09013280892152"; /// time();
             ServiceReference1.sendsmsresponse re = new ServiceReference1.sendClient().send(username, pass, brand, mess, type, phone, idreq);
